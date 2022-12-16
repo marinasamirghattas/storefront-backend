@@ -205,7 +205,7 @@ TOKEN_SECRET=algo720
     </th>
     <tbody>
         <tr>
-            <td>orders/addProduct</td>
+            <td>/orders/addProduct</td>
             <td>post</td>
             <td>addProduct</td>
             <td>✔</td>
