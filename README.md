@@ -179,13 +179,6 @@ TOKEN_SECRET=algo720
             <td>✔</td>
              <td>show current orders</td>
         </tr>
-         <tr>
-            <td>/orders/addProduct/</td>
-            <td>post</td>
-            <td>addProduct</td>
-            <td>✔</td>
-            <td>add new product to order by sending(roduct_id,order_id) in body </td>
-        </tr>
         <tr>
             <td>/orders/create</td>
             <td>post</td>
@@ -193,13 +186,39 @@ TOKEN_SECRET=algo720
             <td>✔</td>
             <td>create new order</td>
         </tr>
-           <tr>
-            <td>//orders/delete/:id</td>
+    <tbody>
+</table>
+
+
+
+3-OrderProducts End Points :
+
+<table>
+    <th>
+        <tr>
+            <td>End Point</td>
+            <td>type</td>
+            <td>Method</td>
+            <td>Need Token</td>
+            <td>Description</td>
+        </tr>
+    </th>
+    <tbody>
+        <tr>
+            <td>orders/addProduct</td>
+            <td>post</td>
+            <td>addProduct</td>
+            <td>✔</td>
+             <td>add product to order</td>
+        </tr>
+        <tr>
+            <td>/orders/deleteProduct</td>
             <td>delete</td>
             <td>destroy</td>
-             <td>✔</td>
-             <td>delete specific order by id</td>
+            <td>✔</td>
+             <td>delete product from order</td>
         </tr>
+       
     <tbody>
 </table>
 
