@@ -29,9 +29,11 @@ describe('order model testing', () => {
     expect(store.createOrder).toBeDefined();
   });
 
-  it('should have a addProductToOrder method', () => {
-    expect(store.addProductToOrder).toBeDefined();
-  });
+  // it('should have a addProductToOrder method', () => {
+  //   expect(store.addProductToOrder).toBeDefined();
+  // });
+
+  //******************************* To be moved to order_product ************************** */
 
   it('should have a showCompletedOrders method', () => {
     expect(store.showCompletedOrders).toBeDefined();
@@ -45,10 +47,11 @@ describe('order model testing', () => {
     expect(typeof result).toEqual('object');
   });
 
-  it('addProductToOrder method should add product', async () => {
-    const result = await store.addProductToOrder(1, 1);
-    expect(typeof result).toEqual('object');
-  });
+  // it('addProductToOrder method should add product', async () => {
+  //   const result = await store.addProductToOrder(1, 1);
+  //   expect(typeof result).toEqual('object');
+  // });
+  //******************************* To be moved to order_product ************************** */
   it('showCompletedOrders method should return the completed orders', async () => {
     const result = await store.showCompletedOrders(1);
     expect(typeof result).toEqual('object');

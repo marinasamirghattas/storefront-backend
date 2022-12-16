@@ -39,32 +39,34 @@ const createOrder = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-const destroy = async (req: Request, res: Response, next: NextFunction) => {
-  try {
-    const deleted = await store.delete(+req.params.id);
-    res.json(deleted);
-  } catch (error) {
-    next(error);
-  }
-};
-const addProduct = async (req: Request, res: Response, next: NextFunction) => {
-  try {
-    const prd = await store.addProductToOrder(
-      req.body.product_id,
-      req.body.order_id
-    );
-    res.json(prd);
-  } catch (error) {
-    next(error);
-  }
-};
+// const destroy = async (req: Request, res: Response, next: NextFunction) => {
+//   try {
+//     const deleted = await store.delete(+req.params.id);
+//     res.json(deleted);
+//   } catch (error) {
+//     next(error);
+//   }
+// };
+
+// const addProduct = async (req: Request, res: Response, next: NextFunction) => {
+//   try {
+//     const prd = await store.addProductToOrder(
+//       req.body.product_id,
+//       req.body.order_id
+//     );
+//     res.json(prd);
+//   } catch (error) {
+//     next(error);
+//   }
+// };
+//****************************************** TO be moved to order_products********************************* */
 
 const orderRoutes = (app: express.Application) => {
   app.get('/orders/completed/:id', auth, showCompletedOrders);
   app.get('/orders/:id', auth, showCurrentOrder);
-  app.post('/orders/addProduct/', auth, addProduct);
+  // app.post('/orders/addProduct/', auth, addProduct);
   app.post('/orders/create', auth, createOrder);
-  app.delete('/orders/delete/:id', auth, destroy);
+  // app.delete('/orders/delete/:id', auth, destroy);
 };
 
 export default orderRoutes;

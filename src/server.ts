@@ -7,6 +7,7 @@ import productRoutes from './handlers/product_handler';
 import morgan from 'morgan';
 import { errorMiddleWare } from './middlewares/err_middelware';
 import orderRoutes from './handlers/order_handler';
+import orderProductsRoutes from './handlers/order_products_handler';
 
 export const app: express.Application = express();
 const address: string = '0.0.0.0:3000';
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 userRoutes(app);
 productRoutes(app);
 orderRoutes(app);
+orderProductsRoutes(app);
 app.get('/', async function (req: Request, res: Response, next: NextFunction) {
   try {
     const user = new UserStore();
